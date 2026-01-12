@@ -182,6 +182,12 @@ figure {
   font-size: 18px;
 }
 
+@media (min-width: 769px) {
+    .side-menu {
+        display: none;
+    }
+}
+
 /* Buttons */
 .btn {
     display: inline-block;
