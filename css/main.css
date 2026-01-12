@@ -121,12 +121,27 @@ figure {
     color: var(--color-primary-green);
 }
 
-.hamburger-menu {
+.burger {
     display: none;
-    font-size: 1.8rem;
-    color: var(--color-primary-green);
-    cursor: pointer;
-    z-index: 1100;
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        align-items: center;
+        gap: 2.5rem;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .burger {
+        display: inline-block;
+        font-size: 1.8rem;
+        color: var(--color-primary-green);
+        cursor: pointer;
+        z-index: 1100;
+    }
 }
 
 /* Buttons */
@@ -161,6 +176,12 @@ figure {
 .btn-secondary:hover {
     background-color: var(--color-primary-green);
     color: #fff;
+}
+
+@media (max-width: 768px) {
+    .btn-secondary {
+        display: none;
+    }
 }
 
 
@@ -198,7 +219,7 @@ figure {
 
 .hero-image {
     flex: 1;
-    max-width: 550px; /* Limit image width */
+    max-width: 450px; /* Reduced image width */
     text-align: center;
 }
 
@@ -206,7 +227,6 @@ figure {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Subtle shadow for depth */
 }
 
 /* Responsive for Hero */
@@ -240,82 +260,76 @@ figure {
 .section-title {
     text-align: center;
     font-family: 'Playfair Display', serif;
-    font-size: 3rem; /* More prominent title */
+    font-size: 3rem;
     color: var(--color-primary-green);
-    margin-bottom: 4rem; /* More space below title */
+    margin-bottom: 1rem; /* Adjusted margin */
 }
 
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive 3-column layout */
-    gap: 2.5rem; /* Increased gap */
-}
-
-.service-card {
-    background-color: #fff; /* White background for cards */
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08); /* More pronounced shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.section-subtitle {
     text-align: center;
-    padding: 2rem; /* More padding inside card */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    font-size: 1.15rem;
+    color: var(--color-text-muted);
+    margin-bottom: 4rem; /* Space below subtitle */
 }
 
-.service-card:hover {
-    transform: translateY(-12px); /* Lift more on hover */
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15); /* Stronger shadow on hover */
+.services-grid-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
 }
 
-.service-icon {
-    font-size: 3.5rem; /* Large icon size */
-    color: var(--color-seconday-green); /* Use secondary green for icons */
-    margin-bottom: 1.5rem;
+.service-step-card {
+    background-color: var(--color-cream-light);
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.service-card-image {
-    display: none; /* Hide image for now, focus on icon */
+.service-step-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
 }
 
-.service-card-content {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.service-card-title {
+.service-step-number {
     font-family: 'Playfair Display', serif;
-    font-size: 1.8rem; /* Larger title */
+    font-size: 3.5rem;
+    color: var(--color-seconday-green);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.service-step-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
     color: var(--color-primary-green);
     margin: 0 0 0.8rem 0;
 }
 
-.service-card-text {
+.service-step-description {
     font-size: 1rem;
     color: var(--color-text-muted);
     line-height: 1.6;
+    margin: 0;
 }
 
-/* Responsive for Services */
-@media (max-width: 1024px) {
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
-    }
-    .service-card {
-        padding: 1.5rem;
-    }
-}
-
+/* Responsive for Services Step Grid */
 @media (max-width: 768px) {
-    .services-grid {
-        grid-template-columns: 1fr; /* 1 column on mobile */
+    .services-grid-steps {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        gap: 1.5rem;
     }
 
-    .section-title {
-        font-size: 2.5rem;
+    .service-step-card {
+        padding: 2rem;
+    }
+
+    .service-step-number {
+        font-size: 3rem;
+    }
+
+    .service-step-title {
+        font-size: 1.6rem;
     }
 }
 
@@ -513,7 +527,7 @@ figure {
 .contact .container {
     display: flex;
     gap: 4rem;
-    align-items: flex-start;
+    align-items: center; /* Changed to center for better visual alignment */
 }
 
 .contact-content {

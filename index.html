@@ -93,9 +93,7 @@
             </ul>
             <a href="#contact" class="btn btn-secondary">Contact Us</a>
         </div>
-        <div class="hamburger-menu">
-          <i class="fas fa-bars"></i>
-        </div>
+        <i class="fas fa-bars burger" id='menuBtn'></i>
       </nav>
     </div>
   </header>
@@ -114,9 +112,7 @@
             </ul>
             <a href="#contact" class="btn btn-secondary">Contact Us</a>
         </div>
-        <div class="hamburger-menu">
-          <i class="fas fa-bars"></i>
-        </div>
+          <i class="fas fa-bars burger" id='menuBtn'></i>
       </nav>
     </div>
   </header>
@@ -132,7 +128,7 @@
           <a href="#services" class="btn btn-primary">View Our Services</a>
         </div>
         <div class="hero-image">
-          <img src="/assets/images/image-03.jpeg" alt="Placeholder image for Thana Glow" />
+          <img src="/assets/images/hero-image.webp" alt="Placeholder image for Thana Glow" />
         </div>
       </div>
     </section>
@@ -140,70 +136,47 @@
     <section id="services" class="services fade-in-section">
       <div class="container">
         <h2 class="section-title">Our Services</h2>
-        <div class="services-grid">
-          <!-- Service Card 1 -->
-          <article class="service-card">
-            <img src="https://placehold.co/300x200/6F8F7A/FFFFFF?text=Gel+Nails" alt="Gel Nails Service" class="service-card-image">
-            <div class="service-card-content">
-              <h3 class="service-card-title">Gel Nails</h3>
-              <p class="service-card-text">Durable and glossy gel nail applications for a long-lasting perfect finish.</p>
-            </div>
+        <p class="section-subtitle">Explore our comprehensive range of beauty and nail treatments designed to pamper and rejuvenate you.</p>
+        <div class="services-grid-steps">
+          <article class="service-step-card">
+            <div class="service-step-number">01</div>
+            <h3 class="service-step-title">Gel Nails</h3>
+            <p class="service-step-description">Durable and glossy gel nail applications for a long-lasting perfect finish, tailored to your style.</p>
           </article>
-          <!-- Service Card 2 -->
-          <article class="service-card">
-            <img src="https://placehold.co/300x200/6F8F7A/FFFFFF?text=Acrylic+Nails" alt="Acrylic Nails Service" class="service-card-image">
-            <div class="service-card-content">
-              <h3 class="service-card-title">Acrylic Nails</h3>
-              <p class="service-card-text">Strong and beautiful acrylic nails, customized to your desired shape and length.</p>
-            </div>
+          <article class="service-step-card">
+            <div class="service-step-number">02</div>
+            <h3 class="service-step-title">Acrylic Nails</h3>
+            <p class="service-step-description">Strong, beautiful acrylic nails, customized to your desired shape and length for a stunning look.</p>
           </article>
-          <!-- Service Card 3 -->
-          <article class="service-card">
-            <img src="https://placehold.co/300x200/6F8F7A/FFFFFF?text=Nail+Extensions" alt="Nail Extensions Service" class="service-card-image">
-            <div class="service-card-content">
-              <h3 class="service-card-title">Nail Extensions</h3>
-              <p class="service-card-text">Instantly add length and glamour to your nails with our professional extensions.</p>
-            </div>
+          <article class="service-step-card">
+            <div class="service-step-number">03</div>
+            <h3 class="service-step-title">Nail Extensions</h3>
+            <p class="service-step-description">Instantly add length and glamour to your nails with our professional and elegant extensions.</p>
           </article>
-          <!-- Service Card 4 -->
-          <article class="service-card">
-            <img src="https://placehold.co/300x200/6F8F7A/FFFFFF?text=Manicures" alt="Manicures Service" class="service-card-image">
-            <div class="service-card-content">
-              <h3 class="service-card-title">Manicures</h3>
-              <p class="service-card-text">Complete nail care, including shaping, cuticle care, and a relaxing hand massage.</p>
-            </div>
+          <article class="service-step-card">
+            <div class="service-step-number">04</div>
+            <h3 class="service-step-title">Manicures</h3>
+            <p class="service-step-description">Complete nail care, including shaping, cuticle treatment, and a relaxing hand massage.</p>
           </article>
-          <!-- Service Card 5 -->
-          <article class="service-card">
-            <img src="https://placehold.co/300x200/6F8F7A/FFFFFF?text=Pedicures" alt="Pedicures Service" class="service-card-image">
-            <div class="service-card-content">
-              <h3 class="service-card-title">Pedicures</h3>
-              <p class="service-card-text">Rejuvenate your feet with our spa pedicure, including exfoliation and massage.</p>
-            </div>
+          <article class="service-step-card">
+            <div class="service-step-number">05</div>
+            <h3 class="service-step-title">Pedicures</h3>
+            <p class="service-step-description">Rejuvenate your feet with our luxurious spa pedicure, including exfoliation and massage.</p>
           </article>
-          <!-- Service Card 6 -->
-          <article class="service-card">
-            <img src="https://placehold.co/300x200/6F8F7A/FFFFFF?text=Facials" alt="Facials Service" class="service-card-image">
-            <div class="service-card-content">
-              <h3 class="service-card-title">Facials</h3>
-              <p class="service-card-text">Customized facials to cleanse, hydrate, and revitalize your skin for a healthy glow.</p>
-            </div>
+          <article class="service-step-card">
+            <div class="service-step-number">06</div>
+            <h3 class="service-step-title">Facials</h3>
+            <p class="service-step-description">Customized facials to cleanse, hydrate, and revitalize your skin for a healthy, radiant glow.</p>
           </article>
-          <!-- Service Card 7 -->
-          <article class="service-card">
-            <img src="https://placehold.co/300x200/6F8F7A/FFFFFF?text=Waxing" alt="Waxing Service" class="service-card-image">
-            <div class="service-card-content">
-              <h3 class="service-card-title">Waxing</h3>
-              <p class="service-card-text">Gentle and effective hair removal for smooth, silky skin on any part of your body.</p>
-            </div>
+          <article class="service-step-card">
+            <div class="service-step-number">07</div>
+            <h3 class="service-step-title">Waxing</h3>
+            <p class="service-step-description">Gentle and effective hair removal for smooth, silky skin, ensuring comfort and lasting results.</p>
           </article>
-          <!-- Service Card 8 -->
-          <article class="service-card">
-            <img src="https://placehold.co/300x200/6F8F7A/FFFFFF?text=Eyelash+Extensions" alt="Eyelash Extensions Service" class="service-card-image">
-            <div class="service-card-content">
-              <h3 class="service-card-title">Eyelash Extensions</h3>
-              <p class="service-card-text">Enhance your eyes with beautiful, natural-looking eyelash extensions.</p>
-            </div>
+          <article class="service-step-card">
+            <div class="service-step-number">08</div>
+            <h3 class="service-step-title">Eyelash Extensions</h3>
+            <p class="service-step-description">Enhance your eyes with beautiful, natural-looking eyelash extensions for added allure.</p>
           </article>
         </div>
       </div>
@@ -219,7 +192,6 @@
           <p class="about-subtitle">About Thana Glow</p>
           <p>Founded with a passion for refined beauty and a commitment to personal care, Thana Glow is more than just a salon—it's a destination for relaxation and rejuvenation. We believe that true beauty comes from a place of wellness and confidence.</p>
           <p>Our studio provides a serene and elegant environment where you can unwind and escape the everyday. Using only the highest quality products and the latest techniques, our skilled therapists are dedicated to providing you with a bespoke experience that leaves you feeling refreshed, confident, and glowing from the inside out.</p>
-          <p class="about-signature">Thana</p>
         </div>
       </div>
     </section>

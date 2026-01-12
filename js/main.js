@@ -1,3 +1,6 @@
+const menuBtn = document.querySelector('#menuBtn');
+menuBtn.addEventListener('click', () => console.log('menu button clicked'));
+
 document.addEventListener('DOMContentLoaded', () => {
   const sections = document.querySelectorAll('.fade-in-section');
 
