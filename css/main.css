@@ -183,7 +183,7 @@ figure {
 }
 
 @media (min-width: 769px) {
-    .side-menu {
+    .side-menu, .side-menu ul {
         display: none;
     }
 }
