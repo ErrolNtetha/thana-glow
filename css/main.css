@@ -262,7 +262,7 @@ figure {
 }
 
 .hero-image img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
     border-radius: 10px;
 }
@@ -285,6 +285,7 @@ figure {
 
     .hero-image {
         margin-top: 3rem;
+        max-width: 100%;
     }
 }
 
