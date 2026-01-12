@@ -1,5 +1,23 @@
-const menuBtn = document.querySelector('#menuBtn');
-menuBtn.addEventListener('click', () => console.log('menu button clicked'));
+const menuBtn = document.getElementById('menuBtn');
+const sideMenu = document.getElementById('sideMenu');
+
+menuBtn.addEventListener('click', () => {
+    sideMenu.classList.toggle('open');
+});
+
+// menuBtn.addEventListener('click', () => {
+//   sideMenu.classList.toggle('open');
+//   menuBtn.classList.toggle('fa-bars');
+//   menuBtn.classList.toggle('fa-times');
+// });
+
+document.addEventListener('click', (e) => {
+  if (!sideMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+    sideMenu.classList.remove('open');
+    menuBtn.classList.add('fa-bars');
+    menuBtn.classList.remove('fa-times');
+  }
+});
 
 document.addEventListener('DOMContentLoaded', () => {
   const sections = document.querySelectorAll('.fade-in-section');
