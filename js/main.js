@@ -1,22 +1,23 @@
-const menuBtn = document.getElementById('menuBtn');
-const sideMenu = document.getElementById('sideMenu');
+const menuBtns = document.querySelectorAll('.menu-btn');
+const sideMenuPanels = document.querySelectorAll('.side-menu-panel');
 
-menuBtn.addEventListener('click', () => {
-    sideMenu.classList.toggle('open');
+menuBtns.forEach((menuBtn, index) => {
+    menuBtn.addEventListener('click', () => {
+        sideMenuPanels[index].classList.toggle('open');
+        menuBtn.classList.toggle('fa-bars');
+        menuBtn.classList.toggle('fa-times');
+    });
 });
 
-// menuBtn.addEventListener('click', () => {
-//   sideMenu.classList.toggle('open');
-//   menuBtn.classList.toggle('fa-bars');
-//   menuBtn.classList.toggle('fa-times');
-// });
-
 document.addEventListener('click', (e) => {
-  if (!sideMenu.contains(e.target) && !menuBtn.contains(e.target)) {
-    sideMenu.classList.remove('open');
-    menuBtn.classList.add('fa-bars');
-    menuBtn.classList.remove('fa-times');
-  }
+  sideMenuPanels.forEach((sideMenuPanel, index) => {
+    const menuBtn = menuBtns[index];
+    if (sideMenuPanel.classList.contains('open') && !sideMenuPanel.contains(e.target) && !menuBtn.contains(e.target)) {
+      sideMenuPanel.classList.remove('open');
+      menuBtn.classList.add('fa-bars');
+      menuBtn.classList.remove('fa-times');
+    }
+  });
 });
 
 document.addEventListener('DOMContentLoaded', () => {
